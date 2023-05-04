@@ -25,9 +25,6 @@ an update with this CLI, some of the manual changes may be overwritten.
     `git clone git@github.com:ottonomy/credential-registry-osmt-publisher.git`
 -   Navigate to the installed directory and run `npm install`
 
-TODO improvement: publish to NPM and enable this to be installable as a global
-package that makes a CLI command available.
-
 ## Operation
 
 Prepare for publication:
@@ -68,33 +65,7 @@ The steps are:
     updated.
 -   Summary of published data is shown.
 
-# Project Notes and TODOs
-
--   [ ] Add a `--dry-run` option to preview the changes that will be made to the
-        registry.
--   [ ] Implement schema checking of the OSMT data as part of server URL
-        validation. Report relevant error messages.
--   Registry Connection:
-    -   [ ] Prompt for API key
-    -   [ ] Get org list with API key
--   OSMT Connection:
-    -   [ ] Prompt for server URL
-    -   [ ] Validate server URL: proper error messages for invalid URLs, server
-            misconfiguration, etc.
--   Skills
-    -   [ ] Paginate OSMT API requests to get all skills.
-    -   [ ] MAYBE: get each individual skill in JSON-LD
--   Previewing
-    -   [ ] Show a preview of the data that will be published to the registry.
-    -   [ ] Save CompetencyFramework graph
--   Collections:
-    -   [ ] Get collection list and each collection detail from OSMT server.
-    -   [ ] generate index of collections like
-            https://credreg.net/registry/assistant#publishcollection with
-            `"ProxyFor"`
-    -   [ ] Push collections to registry also
-
-### OSMT APIs
+### OSMT API Notes
 
 `GET /api/skills` => Array<RSD> `GET /api/collections` => Array<Collection>
 `GET /api/collections/:id` => Collection
@@ -112,9 +83,9 @@ A Link header showing both a "prev" and a "next" page:
 Link: <http://localhost:8080/api/skills?size=50&sort=&status=draft,published&from=100>; rel="next",<http://localhost:8080/api/skills?size=50&sort=&status=draft,published&from=0>; rel="prev"
 ```
 
-### Registry APIs
+### Registry API Notes
 
-Documentation
+Documentation Links
 
 -   [Overview](https://credreg.net/registry/assistant#overview)
 -   [Collections](https://credreg.net/registry/assistant#publishcollection)
@@ -213,5 +184,10 @@ containing 2 `Competency` records).
 
 ### Future improvements
 
--   Add mappings for occupations
--   Publish collections mirroring OSMT collections as well
+-   [ ] Add mappings for occupations
+-   [ ] Publish collections mirroring OSMT collections as well
+-   [ ] Preview data to be published with option to continue.
+-   [ ] Add a `--dry-run` option to preview the changes that will be made to the
+        registry.
+-   [ ] Publish package to npm and make available as a globally installable CLI
+        tool.
