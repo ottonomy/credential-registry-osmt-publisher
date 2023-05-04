@@ -21,13 +21,12 @@ an update with this CLI, some of the manual changes may be overwritten.
 
 ## Installation
 
-```
-npm install -g @ottonomy/credential-engine-osmt-publisher
-```
+-   Clone this repository
+    `git clone git@github.com:ottonomy/credential-registry-osmt-publisher.git`
+-   Navigate to the installed directory and run `npm install`
 
-This installs the `credential-engine-osmt-publisher` command. Non-secret data is
-optionally saved and loaded from a state store `~/.osmt/data.json` in the user's
-home directory. Authentication data is not saved across invocations.
+TODO improvement: publish to NPM and enable this to be installable as a global
+package that makes a CLI command available.
 
 ## Operation
 
@@ -42,8 +41,8 @@ Prepare for publication:
 -   Locate the Organization "CTID" and the API Key. You will paste these into
     the CLI when prompted.
 
-Run the command: `credential-engine-osmt-publisher`, and a series of prompts
-will guide you through the process.
+Run the command: `npm run cli`, and a series of prompts will guide you through
+the process.
 
 ```
 > credential-engine-osmt-publisher
@@ -103,7 +102,7 @@ The steps are:
 Pagination is handled through request query params and response headers. For
 example, a response might include the following headers. Query params control
 page size and sort order. The most common case here will just be to grab
-rel=next links from the Link header until you have paged through the entire
+`rel=next` links from the Link header until you have paged through the entire
 result set.
 
 ```
@@ -215,3 +214,4 @@ containing 2 `Competency` records).
 ### Future improvements
 
 -   Add mappings for occupations
+-   Publish collections mirroring OSMT collections as well
