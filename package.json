@@ -1,0 +1,46 @@
+{
+    "name": "credential-registry-osmt-publisher",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A CLI for publishing RSDs from your OSMT server to your Credential Registry account",
+    "scripts": {
+        "test": "test",
+        "cli": "npx ts-node --esm ./lib/cli.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ottonomy/credential-registry-osmt-publisher.git"
+    },
+    "keywords": [
+        "OSMT",
+        "RSD",
+        "Open",
+        "Skills",
+        "Credential",
+        "Registry",
+        "Credential",
+        "Engine"
+    ],
+    "author": "Nate Otto, Skybridge Skills",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/ottonomy/credential-registry-osmt-publisher/issues"
+    },
+    "homepage": "https://github.com/ottonomy/credential-registry-osmt-publisher#readme",
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.5",
+        "inquirer": "^9.2.0",
+        "is-valid-domain": "^0.1.6",
+        "node-fetch": "^3.3.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4",
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.3",
+        "@types/node": "^18.16.3",
+        "@types/parse-link-header": "^2.0.1",
+        "parse-link-header": "^2.0.0",
+        "tslib": "^2.5.0"
+    }
+}
